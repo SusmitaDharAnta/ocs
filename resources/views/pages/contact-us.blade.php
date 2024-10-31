@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Hey this is my first laravel project </h1>
-    <a href="{{url('contactus')}}">Contact-Us</a>
+    <h1>Hello, Contact us here</h1>
+    <a href="{{url('/')}}">Go to Home Page</a>
 </body>
 </html>
