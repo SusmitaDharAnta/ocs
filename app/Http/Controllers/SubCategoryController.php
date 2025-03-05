@@ -12,10 +12,10 @@ class SubCategoryController extends Controller
     public function SubCategories(){
         $sub_cat = SubCategory::paginate(3);
 
-        return view('sub-category.sub-categories',compact('sub_cat'));
+        return view('backend.sub-category.sub-categories',compact('sub_cat'));
     }
     public function SubCategoryCreate(){
-        return view('sub-category.sub-category-form');
+        return view('backend.sub-category.sub-category-form');
     }
     public function SubCategoryStore(Request $request){
 

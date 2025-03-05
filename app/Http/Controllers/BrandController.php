@@ -9,10 +9,10 @@ class BrandController extends Controller
 {
     public function Brands(){
         $brand=Brand::paginate(2);
-        return view('brand.brands',compact('brand'));
+        return view('backend.brand.brands',compact('brand'));
     }
     public function BrandCreate(){
-        return view('brand.brand-create');
+        return view('backend.brand.brand-create');
     }
     public function BrandStore(Request $request){
 

@@ -12,11 +12,11 @@ class CategoryController extends Controller
     public function Categories(){
 
         $cat=Category::paginate(3);
-        return view('category.categories',compact('cat'));
+        return view('backend.category.categories',compact('cat'));
     }
 
     public function CategoryCreate(){
-        return view('category.category-create-form');
+        return view('backend.category.category-create-form');
 
     }
 
