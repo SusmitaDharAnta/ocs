@@ -11,8 +11,10 @@ use App\Http\Controllers\Frontend\CustomerController as FrontendCustomerControll
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\OrderController as FrontendOrderController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\Frontend\SslCommerzPaymentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
+
 
 
 //website's routes
@@ -33,6 +35,24 @@ Route::get('/add-to-cart/{p_id}',[FrontendOrderController::class,'addToCart'])->
 Route::get('/cart-view',[FrontendOrderController::class,'viewCart'])->name('cart.view');
 
 Route::get('/checkout',[FrontendOrderController::class,'checkout'])->name('checkout');
+
+Route::post('/place-order',[FrontendOrderController::class,'placeOrder'])->name('order.place');
+
+
+
+
+
+//ssl commerz
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
+
+
+
+
 
 
 

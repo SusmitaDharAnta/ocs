@@ -4,7 +4,8 @@
 
 <div class="card">
 
-  <form action="{{('')}}" method="post">
+  <form action="{{route('order.place')}}" method="post">
+
     @csrf
 
     <div class="container">
@@ -22,20 +23,20 @@
                 <div class="accordion-body">
                   <div class="mb-3">
                     <label class="form-label">Receiver Name</label>
-                    <input name="receiver_name" type="text" class="form-control" placeholder="Enter Receiver Name">
+                    <input name="receiver_name" required type="text" class="form-control" placeholder="Enter Receiver Name">
                   </div>
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="mb-3">
                         <label class="form-label">Receiver Address</label>
-                        <input name="address" type="text" class="form-control" placeholder="Enter Receiver Address">
+                        <input name="address" required type="text" class="form-control" placeholder="Enter Receiver Address">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="mb-3">
                         <label class="form-label">Receiver Mobile</label>
-                        <input name="mobile_no" type="text" class="form-control" placeholder="+88017">
-                      </div>
+                        <input name="mobile_no" required type="text" class="form-control" placeholder="Enter Mobile NO">
+                    </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="mb-3">
