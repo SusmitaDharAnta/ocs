@@ -12,37 +12,41 @@
 
 <div class="container-fluid px-4">
 
-<h1 class="a"> Orders </h1> 
+<h1 class="a"> Orders </h1> <br>
+
+
+
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">order_id</th>
+      <th scope="col">customer_id</th>
+      <th scope="col">selling_price</th>
+      <th scope="col">payment_type</th>
+      <th scope="col">order_status</th>
+      <th scope="col">action</th>
     </tr>
   </thead>
   <tbody>
+    @foreach($orders as $data)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{$data->id}}</td>
+      <td>{{$data->order_id}}</td>
+      <td>{{$data->customer_id}}</td>
+      <td>{{$data->selling_price}}</td>
+      <td>{{$data->payment_type}}</td>
+      <td>{{$data->order_status}}</td>
+      <td>
+        <a href="" class="btn btn-primary">Edit</a> <br>
+        <a href="" class="btn btn-danger">Delete</a>
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
 
-@endsection
+@endforeach 
+
+    </tbody>
+  </table>
+  
+  @endsection

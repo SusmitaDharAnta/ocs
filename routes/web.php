@@ -94,7 +94,7 @@ Route::group(['middleware'=>'auth'],function(){
         Route::post('/brand-store',[BrandController::class,'BrandStore'])->name('brand.store');
 
 
-        Route::get('/orders',[OrderController::class,'Orders'])->name('orders');
+        Route::get('/orders',[OrderController::class,'Orders'])->name('order.list');
 
 
         Route::get('/customers',[CustomerController::class,'Customers'])->name('customers');
